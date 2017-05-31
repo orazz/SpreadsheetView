@@ -293,6 +293,11 @@ public class SpreadsheetView: UIView {
     let cornerView = ScrollView()
     let tableView = ScrollView()
 
+    /// The scroll view associated with the spreadsheet view.
+    public var scrollView: UIScrollView {
+        return overlayView
+    }
+
     var cellClasses = [String: Cell.Type]()
     var cellNibs = [String: UINib]()
     var cellReuseQueues = [String: ReuseQueue<Cell>]()
